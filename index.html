@@ -51,7 +51,12 @@
       <!--  solutions section -->
       <section class="solutions bg-solutions">
         <h1 class="solutions-title">efective solutions for your bussines</h1>
-        <button class="button-primary" type="button" id="button-request" data-modal-open>
+        <button
+          class="button-primary"
+          type="button"
+          id="data-modal-open"
+          data-modal-open
+        >
           Request our service
         </button>
       </section>
@@ -137,11 +142,7 @@
           <!-- images -->
           <ul>
             <li>
-              <img
-                src="./images/imagen.jpg"
-                alt="desarrollo Web"
-                width="370"
-              />
+              <img src="./images/imagen.jpg" alt="desarrollo Web" width="370" />
               <div class="div">
                 <p class="div__p">applications of desktop</p>
               </div>
@@ -383,6 +384,17 @@
           </ul>
         </div>
       </section>
+      <!--modal windows -->
+      <div class="backdrop is-hidden" id="data-modal" data-modal>
+        <div class="modal">
+          <button class="modal-close" id="data-modal-close" data-modal-close>
+            <svg class="icon-close-modal">
+              <use href="./images/SVG/close.svg#close"></use>
+            </svg>
+          </button>
+          <form action=""></form>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -447,17 +459,7 @@
         </li>
       </ul>
     </footer>
-    <!--modal windows -->
-    <div class="backdrop is-hidden" id="data-modal">
-      <div class="modal">
-        <button class="modal-close" id="data-modal-close">
-          <svg class="icon-close-modal">
-            <use href="/images/SVG/sprite-sheet.svg#close"></use>
-          </svg>
-        </button>
-        <form action=""></form>
-      </div>
-    </div>
+
     <!--We put before the closing tag body -->
     <script src="./js/modal.js"></script>
   </body>
