@@ -17,6 +17,7 @@
   --accent-color: #2196f3;
   --banner-gray: rgba(47, 48, 58, 0.4);
   --background-black: #21303a;
+  --background-text-oscuro: rgb(47, 48, 58, 0.8);
   --background-gray: #f5f4fa;
   --background-portfolio: #e5e5e5;
   --border-header: #ececec;
@@ -69,6 +70,26 @@ header nav {
 header nav .nav-menu {
   display: flex;
   gap: 80px;
+}
+.nav-menu .page {
+  position: relative;
+}
+.nav-menu .page::after {
+  content: "";
+  background-color: var(--accent-color);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 28px);
+  width: 100%;
+  height: 4px;
+  border: 2px;
+  border-radius: 2px;
+  transition: opacity 250ms;
+}
+.page.current::after,
+.nav-menu .page:hover::after {
+  opacity: 1;
 }
 header ul {
   display: flex;
@@ -249,13 +270,38 @@ header ul {
   padding: 0;
 }
 .section.what-we-do ul {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: relative;
   gap: 30px;
   list-style: none;
   margin-top: 55px;
   width: 1170px;
+  height: 294px;
+}
+.what-we-do .div {
+  position: absolute;
+  background: var(--background-text-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 369px;
+  height: 70px;
+}
+.div__p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
 }
 .section.what-we-do h2 {
   padding-bottom: 10px;
@@ -407,6 +453,50 @@ header ul {
 }
 .section__customers .icon {
   fill: var(--primary-text-color);
+}
+/* -------------- ventana modal----------------------------- */
+.backdrop {
+  position: fixed;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.659);
+z-index: 5;
+}
+.modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+  height: 581px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.is-hidden {
+  visibility: hidden;
+}
+.modal-close {
+width: 30px;
+height: 30px;
+border-radius: 25px;
+background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.icon.modal-close {
+  width: 18px;
+  height: 18px;
+  fill: var(--background-black);
 }
 /* -----------------------Portfolio section  ---------------------------*/
 
