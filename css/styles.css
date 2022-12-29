@@ -465,7 +465,7 @@ header ul {
   opacity: 1;
   visibility: visible;
   transition: opcity 250 cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 250 cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250 cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: relative;
@@ -476,12 +476,11 @@ header ul {
   transform: translate(-50%, -50%);
   scale: 100%;
   background: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
-  0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
- transform-origin: left top;
- padding: 8px;
+  transform-origin: left top;
+  padding: 8px;
 }
 .is-hidden {
   visibility: hidden;
@@ -489,23 +488,25 @@ header ul {
   pointer-events: none;
 }
 .modal-close {
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+  display: flex;
+  float: right;
   width: 30px;
   height: 30px;
   border-radius: 25px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.icon.modal-close {
+.icon-close-modal {
+  fill: var(--background-black);
+  position: absolute;
+  top: 4px;
+  right: 6px;
   width: 18px;
   height: 18px;
-  top: 2px;
-  fill: var(--background-black);
-  }
-  backdrop.is-hidden .modal{
- scale: 0;
+}
+backdrop.is-hidden .modal {
+  scale: 0;
 }
 /* -----------------------Portfolio section  ---------------------------*/
 
