@@ -172,7 +172,7 @@ header ul {
   height: 600px;
   padding: 200px var(--container-padding);
   position: relative;
-
+  margin: 0 auto;
   max-width: 1600px;
 }
 .solutions .solutions-title {
